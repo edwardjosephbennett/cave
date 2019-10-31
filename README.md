@@ -37,7 +37,7 @@ See below table for available options to pass through as an object
 Option          | Type | Description
 ----------------|------|--------------------------------------------------------------------------------------
 `css`           | String | The CSS rules to remove from the stylesheet provided in string format. e.g: `a { color: #f00; }`
-`compress`      | Boolean | Whether or not to compress output
+`compress`      | Boolean | Whether or not to compress output. *Available in this version only.*
 
 
 Cave will produce an AST and remove any matching rules, then the resulting CSS diff will be returned.

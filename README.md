@@ -1,37 +1,44 @@
 ## == Please Note ==
 This is a fork of the original repo of [cave][2]. I have updated the dependencies for it to be secure. I will also be slowly adding new features as I require them. The original seems to have been abandoned, so feel free to use this version in your projects.
 
+Below is an updated readme file. You can find the original [here][3]
+
 License: MIT
 
 # cave
+The main purpose of this module is to remove critical CSS from your stylesheet after inlining it in your pages. Once you have run your stylesheet through something like [penthouse][1] to extract critical css from a file, you are still left with the original file at the end. This module aims to extract those critical rules from the stylesheet so you only have the leftover css to lazyload in when required.
 
-> Remove critical CSS from your stylesheet after inlining it in your pages
-
-If you don't understand the purpose of this module, refer to [penthouse][1] which extracts critical CSS from a file, but doesn't remove it. Using this tool you can take the styles produced by an extraction tool like [penthouse][1] and actually remove them from your stylesheet.
-
-## Install
+### Getting started
+Start by installing the module using NPM:
 
 ```shell
 npm install cave --save
 ```
 
-## API
+### How it works
 
-The `cave` exposes a single function that takes the file path to a stylesheet and a string containing valid CSS you want to remove from the provided stylesheet.
+`cave` exposes a single function that takes the file path to a stylesheet and a string containing valid CSS you want to remove from the provided stylesheet.
 
-### `cave(stylesheet, options)`
+Usage: `cave(stylesheet, options)`
 
-The `options` object contains the following properties.
+Property        | Type | Description
+----------------|------|--------------------------------------------------------------------------------------
+`stylesheet`    | String | Provide a file path to the stylesheet you will be removing the rules from
+`options`       | Object | Provide an object with options. 
 
-Property | Description
----------|-----------------------------------------------------------------------
-`css`    | The CSS rules to remove from the stylesheet. e.g: `a { color: #f00; }`
+See below table for available options to pass through as an object
+
+Option          | Type | Description
+----------------|------|--------------------------------------------------------------------------------------
+`css`           | String | The CSS rules to remove from the stylesheet provided in string format. e.g: `a { color: #f00; }`
+`compress`      | Boolean | Whether or not to compress output
+
 
 Cave will produce an AST and remove any matching rules, then the resulting CSS diff will be returned.
 
-## CLI
+### CLI
 
-Cave works well with standard input.
+cave works well with standard input and is available for use on the command line. 
 
 ```shell
 cat path/to/file | cave <stylesheet> > slim.css
@@ -43,17 +50,10 @@ You can also pass in the critical CSS file as an option.
 cave --css path/to/file <stylesheet> > slim.css
 ```
 
-## Tests
-
-Run tests using `npm`.
-
-```shell
-npm test
-```
-
-## License
+### License
 
 MIT
 
 [1]: https://github.com/pocketjoso/penthouse
 [2]: https://github.com/bevacqua/cave
+[3]: README.ORIGINAL.md

@@ -1,3 +1,6 @@
+# 2.1.1
+- NPM modules update to fix vulnerabilities
+
 # 2.1.0 Updates
 - Update `npm` modules
 - Update `cave.js` to use latest dependencies

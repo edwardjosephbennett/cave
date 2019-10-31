@@ -1,5 +1,5 @@
 ## == Please Note ==
-This is a fork of the original repo of [cave][https://github.com/bevacqua/cave]. I have updated the dependencies for it to be secure. I will also be slowly adding new features as I require them. The original seems to have been abandoned, so feel free to use this version in your projects.
+This is a fork of the original repo of [cave][2]. I have updated the dependencies for it to be secure. I will also be slowly adding new features as I require them. The original seems to have been abandoned, so feel free to use this version in your projects.
 
 License: MIT
 
@@ -56,3 +56,4 @@ npm test
 MIT
 
 [1]: https://github.com/pocketjoso/penthouse
+[2]: https://github.com/bevacqua/cave

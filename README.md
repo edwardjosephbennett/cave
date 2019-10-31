@@ -9,10 +9,16 @@ License: MIT
 The main purpose of this module is to remove critical CSS from your stylesheet after inlining it in your pages. Once you have run your stylesheet through something like [penthouse][1] to extract critical css from a file, you are still left with the original file at the end. This module aims to extract those critical rules from the stylesheet so you only have the leftover css to lazyload in when required.
 
 ### Getting started
-Start by installing the module using NPM:
+To install this updated version, run the following in your preferred Terminal:
 
 ```shell
-npm install cave --save
+npm install https://github.com/edwardjosephbennett/cave
+```
+
+*Want the original?*
+You can install the original using:
+```shell
+npm install cave
 ```
 
 ### How it works
